@@ -1,24 +1,23 @@
+/*
+Count, no of 1s set, in range of 1 to n.
+ */
 package RBR_DSA;
-class Solution{
 
-    //Function to return sum of count of set bits in the integers from 1 to n.
-
-}
-public class CountingTotalBits {
+public class SumOfSetBits {
     public static int countSetBits(int n){
         //find largest 2 power number, < n
         if(n == 0)
             return 0;
 
-        int largestPower = largePowerComputing(n);
+        int largestPower = largePowerComputing(n);//O(logn)
         int lastNumberSortedForCount = (1<<(largestPower-1)) * largestPower ;
         int restCountSorted = n - (1<<largestPower) + 1;
         int restToBeCounted = n - (1<<largestPower);
-        int ans= lastNumberSortedForCount+restCountSorted+countSetBits(restToBeCounted);
+        int ans= lastNumberSortedForCount+restCountSorted+countSetBits(restToBeCounted);//T(n)=T(rest)+1
         return ans;
 
     }
-    public static  int largePowerComputing(int n)
+    public static  int largePowerComputing(int n)//O(logn)
     {
         int i=0;
         while((1 << i) <= n)

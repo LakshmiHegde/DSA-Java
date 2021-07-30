@@ -1,4 +1,8 @@
 /*
+Problem statement : Given, two arrays, merge them, without using any extra space.
+You could use merge procedure, but it takes O(n) extra space.
+So modified, insertion sort is the approach
+
 Time = O(mn), for arr1 , if each element is greater than ele in arr2, then, for every element in worst case, we may need to swap them, and shift all elements of arr2, to find right position for swapped one.
 therefore, for 1 ele, n elements of arr2 gets shifted.
 therefore, n elements, mn .

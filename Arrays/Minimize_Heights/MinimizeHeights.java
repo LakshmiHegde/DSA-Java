@@ -1,15 +1,22 @@
+/*
+minimize difference between height of largest and smallest tower, by adding/subtracting k, once .
+Sorting takes O(nlogn) time.
+Rest logic, on sorted array takes, O(n)
+Time = O(nlogn)
+Space=O(1)
+ */
 package RBR_DSA.ArrayProblems;
 import java.util.*;
 public class MinimizeHeights {
     static int getMinDiff(int[] arr, int n, int k)
     {
-        Arrays.sort(arr);
+        Arrays.sort(arr);//O(nlogn)
         int ans=arr[n-1] - arr[0];
         int min=arr[0]+k;
         int max=arr[n-1]-k;
         int min_c,max_c;
 
-        for(int i=0;i<n-1;i++)
+        for(int i=0;i<n-1;i++)//O(n)
         {
             int add=arr[i]+k;
             int sub=arr[i+1]-k;

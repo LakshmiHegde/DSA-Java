@@ -1,6 +1,14 @@
+/*
+display, how many bits are set , in corresponding binary representation of decimal, in a given range.
+ex: dec - count
+    0-0
+    1-1
+    2-1
+    3-2
+ */
 package RBR_DSA;
 
-public class CountingBits {
+public class CountSetBits {
     public static int[] countBits(int n)
     {
         int res[] = new int[n+1];
