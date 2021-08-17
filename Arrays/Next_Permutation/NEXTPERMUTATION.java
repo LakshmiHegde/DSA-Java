@@ -4,7 +4,7 @@ Time = O(count), count = number of digits in an integer
 Space = O(1), created, arr of size 10, to hold increasing range elements/digits, which doesn't depend on i/p size,
 because, constraint was that, input n goes upto 2^31,
 2^31 = 2147483648, has 10 digits in it,
-therefore max i need that size array, to hold the digits, when digits in number are in descending order. ex: 7890
+therefore max I need 10 sized array, to hold the digits
  */
 package RBR_DSA.ArrayProblems;
 
